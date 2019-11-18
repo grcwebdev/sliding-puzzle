@@ -3,8 +3,11 @@ body {
     width: 100%;
     box-sizing: border-box;
     figure.SlidingPuzzleFigure {
+        width: 70%;
+        margin: 0;
+        padding: 50px;
         ul.SlidingPuzzle {
-            padding: 2.25%;
+            padding: 3%;
             box-sizing: border-box;
             list-style: none;
             background: #000;
@@ -12,8 +15,8 @@ body {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
-            width: 80%;
-            max-width: 330px;
+            width: 100%;
+            margin: 0;
             position: relative;
             margin-bottom: 5%;
             &::after {
@@ -27,7 +30,7 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 3vw;
+                font-size: 10vw;
                 font-family: sans-serif;
                 border-top: 5px solid #ccc;
                 border-left: 5px solid #ccc;
@@ -68,7 +71,43 @@ body {
             color: #000;
             font-family: sans-serif;
             font-style: italic;
-            margin-left: 14%;
+            margin-left: 7%;
+        }
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    body {
+        figure.SlidingPuzzleFigure {
+            ul.SlidingPuzzle {
+                width: 70%;
+                margin-bottom: 3%;
+                li.Tile {
+                    font-size: 8vw;
+                }
+            }
+            figcaption {
+                font-size: 3.5vw;
+                margin-left: 5%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        figure.SlidingPuzzleFigure {
+            ul.SlidingPuzzle {
+                width: 40%;
+                margin-bottom: 1.5%;
+                li.Tile {
+                    font-size: 4vw;
+                }
+            }
+            figcaption {
+                font-size: 2vw;
+                margin-left: 3%;
+            }
         }
     }
 }
